@@ -1,0 +1,15 @@
+<form name="formulario" id="form" method="GET" action="/app/Settings/set_server_address">
+  <table><tr><td>&nbsp;</td></tr></table>
+  <table align="center" width="100%" cellspacing="3" border="0">
+    <tr >
+      <td rowspan="3" width="30%" align="center"><img src="/public/images/icos/settings.png" width="100" height="100"/></td>
+      <td width="70%" align="center">&nbsp;Introduzca la direcci&oacute;n IP del servidor</td>
+    </tr>
+    <tr>
+     <td width="70%" align="center"><input type="text" name="address" value="<%=Rho::RhoConfig.demoserver%>"></td>
+    </tr>
+    <tr>
+      <td width="70%" align="center"><a onclick="document.forms[0].submit();"><img src="/public/images/icos/boton_modificar.gif"/></a></td>
+    </tr>
+  </table>
+</form>

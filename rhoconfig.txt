@@ -1,0 +1,34 @@
+# Startup page for your application
+start_path = '/app/Settings/change_server_address'
+
+# Path to the options page (in this case handled by javascript)
+options_path = '/app/Settings'
+
+# Location of bundle url (i.e. from rhohub.com)
+rhobundle_zip_url = ''
+
+# Optional password to access bundle (usually not required)
+rhobundle_zip_pwd = nil
+
+# Rhodes runtime properties
+MinSeverity  = 1
+LogToOutput = 1
+LogCategories = *
+ExcludeLogCategories =
+KeepTrackOfLastVisitedPage = 0
+LastVisitedPage = '/app/Search/'
+
+MaxLogFileSize=0
+
+use_persistent_storage=1
+splash_screen='delay=1;hcenter;vzoom'
+
+alerts=1
+sound=1
+vibrate=1
+SortByDate=1
+demoserver=
+
+syncserver = ''
+logserver = 'http://rhologs.heroku.com/'
+#logname = 'aeroprise'

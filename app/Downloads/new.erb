@@ -1,0 +1,27 @@
+<div id="pageTitle">
+	<h1>New <%= @downloads.title %></h1>
+</div>
+
+<div id="toolbar">
+     <div id="leftItem" class="backButton"><%= link_to "Cancel", :action => :index %></div>
+</div>
+
+<div id="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+            <input type="hidden" name="id" value="<%= @downloads.object %>"/>
+            <ul>
+                
+                <li>
+                    <label for="downloads[name]" class="fieldLabel">Name</label>
+                    <input type="text" name="downloads[name]" <%= placeholder( "Name" ) %> />
+                </li>
+                
+                <li>
+                    <label for="downloads[type]" class="fieldLabel">Type</label>
+                    <input type="text" name="downloads[type]" <%= placeholder( "Type" ) %> />
+                </li>
+                
+            </ul>
+            <input type="submit" class="standardButton" value="Create" />
+    </form>
+</div>

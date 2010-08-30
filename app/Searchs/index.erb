@@ -1,0 +1,19 @@
+<table align="center" class="grid" cellpadding="10" cellspacing="0" border="0" width="100%">
+
+  <%   @folder_result.each_with_index do |folder,i|
+
+  %>
+    <tr class='grid_dark' >
+      <td width="2%"><img width="25" height="25" align="middle" align="middle" src="/public/images/icos/folder.jpg"/></td>
+      <td class="gridright" valign="middle">&nbsp;&nbsp;<%=folder.attributes['name']%></td>
+    </tr>
+  <%  end %>
+  <%   @file_result.each_with_index do |file,i|
+
+  %>
+    <tr  >
+      <td width="2%" valign="middle"><img  width="25" height="25" align="middle" align="middle" src="/public/images/icos/<%=file.attributes['type']%>.jpg"/></td>
+      <td class="gridright" valign="middle">&nbsp;<a href="/app/Searchs/download_file?url=http://<%=Rho::RhoConfig.demoserver%><%=file.attributes['path']%>&name=<%=file.attributes['name']%>&type=<%=file.attributes['type']%>"><%=file.attributes['name']%>  (<%=file.attributes['size']%>KB)</a></td>
+    </tr>
+  <%  end %>
+</table>

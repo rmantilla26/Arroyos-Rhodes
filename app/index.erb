@@ -1,0 +1,42 @@
+<div class="toolbar"><h1 id="pageTitle"><img src="/public/images/bb/header_main_menu.png" /></h1></div>
+
+<% if @msg %>
+  	<table cellspacing="10"><tr><td>
+  	<span style="color:#ff0000"><%= @msg %></span>
+  	</td></tr></table>
+<% end %>
+
+<table class="grid" cellpadding="0" cellspacing="0" border="0">
+  <tr id="ok1">
+    <td class="gridleft" valign="middle"><img class="menu_icon" src="/public/images/bb/view_accounts.png" /></td>
+    <td class="gridright" valign="middle">
+      <a href="/app/Settings/do_login">View Accounts</a>
+    </td>
+    <td class="gridlast" valign="middle"><img src="/public/images/listArrow.png" /></td>
+  </tr>
+
+  <tr class="grid_dark">
+    <td class="gridleft" valign="middle"><img class="menu_icon" src="/public/images/bb/pay_bills.png" /></td>
+    <td class="gridright" valign="middle"><a href="#">Pay Bills</a></td>
+    <td class="gridlast" valign="middle"><img src="/public/images/listArrow.png" /></td>
+  </tr>
+
+  <tr>
+    <td class="gridleft" valign="middle"><img class="menu_icon" src="/public/images/bb/transfer_funds.png" /></td>
+    <td class="gridright" valign="middle"><a href="#">Transfer Funds</a></td>
+    <td class="gridlast" valign="middle"><img src="/public/images/listArrow.png" /></td>
+  </tr>
+
+  <tr class="grid_dark">
+    <td class="gridleft" valign="middle"><img class="menu_icon" src="/public/images/bb/find.png" /></td>
+    <td class="gridright" valign="middle"><a href="#">Find ATM/Branch</a></td>
+    <td class="gridlast" valign="middle"><img src="/public/images/listArrow.png" /></td>
+  </tr>
+
+  <tr>
+    <td class="gridleft" valign="middle"><img class="menu_icon" src="/public/images/bb/help.png" /></td>
+    <td class="gridright" valign="middle"><a href="#">Get Help</a></td>
+    <td class="gridlast" valign="middle"><img src="/public/images/listArrow.png" /></td>
+  </tr>
+
+</table>

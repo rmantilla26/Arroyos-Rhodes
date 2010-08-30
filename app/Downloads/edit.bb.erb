@@ -1,0 +1,29 @@
+<div id="pageTitle">
+		<h1>Edit <%= @downloads.name%></h1>
+</div>
+
+<div id="toolbar">
+    <%= link_to "Back", :action => :show, :id => @downloads.object %>
+    <%= link_to "Delete", :action => :delete, :id => @downloads.object %>
+</div>
+
+
+<div id="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+    	<input type="hidden" name="id" value="<%= @downloads.object %>"/>
+            <table>
+        		
+                    <tr>
+            			<td class="itemLabel">Name: </td>
+              			<td class="itemValue"><input type="text" name="downloads[name]" value="<%= @downloads.name %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Type: </td>
+              			<td class="itemValue"><input type="text" name="downloads[type]" value="<%= @downloads.type %>"/></td>
+          		    </tr>
+        		
+            </table>
+            <input type="submit" class="standardButton" value="Update" />
+    </form>
+</div>

@@ -1,0 +1,28 @@
+<div id="pageTitle">
+	<h1>Edit <%= @downloads.name%></h1>
+</div>
+
+<div id="toolbar">
+    <div id="leftItem" class="backButton"><%= link_to "Cancel", :action => :show, :id => @downloads.object %></div>
+    <div id="rightItem" class="regularButton"><%= link_to "Delete", :action => :delete, :id => @downloads.object %></div>
+</div>
+
+<div id="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+            <input type="hidden" name="id" value="<%= @downloads.object %>"/>
+            <ul>
+                
+                <li>
+                    <label for="downloads[name]" class="fieldLabel">Name</label>
+                    <input type="text" name="downloads[name]" value="<%= @downloads.name%>" <%= placeholder( "Name" ) %> />
+                </li>
+                
+                <li>
+                    <label for="downloads[type]" class="fieldLabel">Type</label>
+                    <input type="text" name="downloads[type]" value="<%= @downloads.type%>" <%= placeholder( "Type" ) %> />
+                </li>
+                
+            </ul>
+            <input type="submit" class="standardButton" value="Update" />
+    </form>
+</div>

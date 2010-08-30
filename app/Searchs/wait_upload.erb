@@ -1,0 +1,16 @@
+<table><tr><td>&nbsp;</td></tr></table>
+<table align="center" width="100%" cellspacing="3" border="0">
+  <tr >
+    <td rowspan="2" width="20%" align="center" valign="middle"><img src="/public/images/icos/wait.png" width="100" height="100"/></td>
+    <td width="80%" align="center" valign="middle">&nbsp;Cargando el archivo al servidor por favor espere...</td>
+  </tr>
+  <tr>
+    <td width="80%" align="center" valign="middle"><a href="<%=url_for :action => :cancel_upload_httpcall%>"><img src="/public/images/icos/boton_cancelar.gif"/></a></td>
+  </tr>
+</table>
+<table><tr><td>&nbsp;</td></tr></table>
+<table align="center" width="100%" cellspacing="3" border="0">
+  <tr>
+    <td width="100%" align="center" valign="middle"><img  width="25" height="25" src="/public/images/icos/<%=@type%>.jpg"/>&nbsp;<%=@name%></td>
+  </tr>
+</table>

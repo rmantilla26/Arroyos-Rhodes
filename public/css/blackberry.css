@@ -1,0 +1,210 @@
+body {
+    margin: 0;
+    font-family: Helvetica, Arial;
+    background: #ffffff;
+    overflow-x: hidden;
+}
+.toolbar_code {
+    text-align:center;
+    margin: 10px;
+    width: 100%;
+}
+.toolbar_button {
+    background: url(/public/images/bb/login_submit.jpg) #FFFFFF repeat-x;
+    height:30px;
+    text-align:center;
+    margin: 10px;
+    border: 1px solid #000033;
+    width: 100%;
+}
+.toolbar_button > h1 {
+    width: auto;
+    font-weight:normal;
+    margin: 0 auto;
+    text-align: center;
+    white-space: nowrap;
+    color: #FFFFFF;
+}
+.toolbar {
+    background: url(/public/images/bb/line.jpg) #FFFFFF repeat-x;
+    height:56px;
+    text-align:center;
+}
+.toolbar > h1 {
+    width: auto;
+    font-weight:normal;
+    margin: 0 auto;
+    text-align: center;
+    white-space: nowrap;
+    color: #FFFFFF;
+}
+
+img{
+    border-width: 0;
+}
+table.grid_show {
+    background:#FFFFFF none repeat scroll 0 0;
+    color:#1B396D;
+    width:100%;
+}
+table.grid_show td {
+    padding-bottom:3px;
+    padding-left:10px;
+    padding-top:5px;
+}
+
+table.grid {
+    background:#FFFFFF none repeat scroll 0 0;
+    color:#1B396D;
+    width:100%;
+
+}
+.grid_dark {
+    background: #F5F6CE;
+}
+table.grid td {
+    padding-bottom:4px;
+    padding-left:0px;
+    padding-top:4px;
+}
+table.grid_show tr:last-of-type td{
+    border-bottom: none;
+}
+table.grid tr:last-of-type td{
+    border-bottom: none;
+}
+.gridleft_login {
+    font-size:75%;
+    color:#08088A;
+}
+.search_text {
+    font-size:75%;
+    color:#000000;
+}
+.gridright_login {
+    text-align: left;
+    font-size:75%;
+    width: 70%;
+}
+.submit_td{
+    width: 98%;
+}
+.gridleft {
+    text-align: center;
+    width: 8%;
+}
+.gridright {
+    text-align: left;
+    font-size: 5px;
+    width: 100%;
+    vertical-align:middle;
+}
+.gridquestion {
+    color:#1B396D;
+    font-size:5pt;
+    text-align: left;
+    font-weight:bold;
+    width: 99%;
+}
+.input_size{
+    font-size: 9px;
+    height: 6px;
+}
+.button{
+    font-size: 6px;
+  
+}
+
+.gridanswer {
+    color: #000000;
+    font-size:5pt;
+    font-weight:normal;
+    width: 99%;
+}
+
+.gridinfo {
+    color: #000000;
+    font-size:5pt;
+    text-align: left;
+    font-weight:normal;
+    width: 59%;
+}
+.gridprice {
+    color: #000000;
+    text-align: right;
+    font-size:5pt;
+    width:30%;
+}
+.gridlast {
+    text-align: right;
+    font-weight:bold;
+    width: 1%;
+}
+.menu_icon {
+    border:none;
+    vertical-align: middle;
+    padding-right: 0px;
+    height: 25px; width: 25px;
+
+}
+.submit{
+    margin: 3px;
+    padding: 3px;
+    width: 80%;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.small{
+    color:#000000;
+    font-size:8px;
+    font-weight:normal;
+}
+.small_price{
+    color:#000000;
+    font-size:9px;
+    font-weight:normal;
+}
+.gray_text{
+    color:#D7D7D7;
+    font-size:9px;
+}
+.white_text_bold{
+    color:#ffffff;
+    font-size:7px;
+    font-weight:bold;
+}
+.white_text_tittle{
+    color:#ffffff;
+    font-size:10px;
+    font-weight:bold;
+}
+.white_text{
+    color:#ffffff;
+    font-size:7px;
+}
+.menu_text{
+    font-size:8px;
+    color:#000099 
+}
+.input{
+    font-size:9px;
+    border: 1px;
+
+
+}
+
+.thumbnail {
+    border:none;
+    vertical-align: middle;
+    padding-right: 0px;
+    height: 40px; width: 40px;
+
+}
+
+.b-buscar{
+    border:0 none;
+    color:#036;
+    cursor:pointer;
+    height:20px;
+    width:30px;
+}

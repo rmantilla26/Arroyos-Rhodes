@@ -1,0 +1,51 @@
+<hr style="color:gray">
+
+  <font class="search_text">&nbsp;"<%=Rho::RhoConfig.search%>"</font>
+<hr style="color:white">
+<table align="center" class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+
+  <%   @friend_list.each_with_index do |friend,i|
+
+    if @sw==1
+      titulo=friend.elements['title'].text
+      precio=friend.elements['price'].text
+      thumbnail = /(.*)&v(.*)/.match(friend.elements['image_url'].text)
+      match_data = /(.*)&f=(.*)\.jpg&v(.*)/.match(friend.elements['image_url'].text)
+      codigo_img= match_data[2]
+      thumbnail_img = "#{thumbnail[1]}&v=M"
+      item={}
+      item["codigo"]=titulo
+      item["titulo"]=titulo
+      item["precio"]=precio
+      item["thumbnail_img"]=thumbnail_img
+      item["codigo_img"]=codigo_img
+      @friends=Friends.new(item)
+      @friends.save
+      codigo=@friends.object
+    else
+      titulo=friend.titulo
+      precio=friend.precio
+      thumbnail_img=friend.thumbnail_img
+      codigo_img=friend.codigo_img
+      codigo=friend.object
+    end
+    if (i%2)==0
+      clase="class='grid_dark'"
+    end
+    Rho::RhoConfig.friends +=1
+    
+  %>
+    <tr <%=clase%> >
+      <td <%=clase%> width="3%" valign="middle">&nbsp;<td>
+      <td <%=clase%> width="3%" valign="middle">&nbsp;&nbsp;<img class="thumbnail" src="<%=thumbnail_img%>" align="middle" /><td>
+          <td <%=clase%> width="3%" valign="middle"> &nbsp;<td>
+          <td <%=clase%> width="80%" valign="middle"><a class="menu_text" href="/app/Friends/show?codigo=<%=codigo%>&codigo_img=<%=codigo_img%>"><%=titulo%><br>$<%=precio%></a></td>
+
+    </tr>
+  <%  end
+  Alert.hide_popup
+%>
+<tr  >
+  <td class="search_text" width="100%" colspan="4" align="center" valign="bottom"><a href="/app/Friends/index?search=<%=Rho::RhoConfig.search%>&pagina=<%=Rho::RhoConfig.paginaanterior%>"><img src="/public/images/bb/anterior.png"/></a>|<a href="/app/Friends/index?search=<%=Rho::RhoConfig.search%>&pagina=<%=Rho::RhoConfig.paginaanterior%>"><%=Rho::RhoConfig.paginaanterior%></a>&nbsp;<%=Rho::RhoConfig.paginaactual%>&nbsp;<a href="/app/Friends/index?search=<%=Rho::RhoConfig.search%>&pagina=<%=Rho::RhoConfig.paginasiguiente%>"><%=Rho::RhoConfig.paginasiguiente%></a>|<a href="/app/Friends/index?search=<%=Rho::RhoConfig.search%>&pagina=<%=Rho::RhoConfig.paginasiguiente%>"><img src="/public/images/bb/siguiente.png"/></a><td>
+    </tr>
+</table>
