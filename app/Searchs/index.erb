@@ -1,7 +1,9 @@
-<table align="center" class="grid" cellpadding="10" cellspacing="0" border="0" width="100%">
+<table align="top" cellpadding="5" cellspacing="0" border="0" width="100%">
 
-  <%   @folder_result.each_with_index do |folder,i|
-
+  <%
+  i=0
+  @folder_result.each_with_index do |folder,i|
+    i=i+1
   %>
     <tr class='grid_dark' >
       <td width="2%"><img width="25" height="25" align="middle" align="middle" src="/public/images/icos/folder.jpg"/></td>
@@ -9,11 +11,11 @@
     </tr>
   <%  end %>
   <%   @file_result.each_with_index do |file,i|
-
   %>
-    <tr  >
-      <td width="2%" valign="middle"><img  width="25" height="25" align="middle" align="middle" src="/public/images/icos/<%=file.attributes['type']%>.jpg"/></td>
-      <td class="gridright" valign="middle">&nbsp;<a href="/app/Searchs/download_file?url=http://<%=Rho::RhoConfig.demoserver%><%=file.attributes['path']%>&name=<%=file.attributes['name']%>&type=<%=file.attributes['type']%>"><%=file.attributes['name']%>  (<%=file.attributes['size']%>KB)</a></td>
+    <tr >
+      <td width="1%" valign="middle" class="odd">&nbsp;</td>
+      <td width="2%" valign="middle" class='odd'><img  width="48" height="48" align="middle" align="middle" src="/public/images/icos/<%=file.attributes['type']%>.png"/></td>
+      <td class="gridright" valign="top"><a href="/app/Searchs/download_file?url=http://<%=Rho::RhoConfig.demoserver%><%=file.attributes['path']%>&name=<%=file.attributes['name']%>&type=<%=file.attributes['type']%>"><%=file.attributes['name']%></a><br><%=file.attributes['size']%>KB</td>
     </tr>
   <%  end %>
 </table>

@@ -1,3 +1,6 @@
+.odd {background-color:#fff; border-bottom-color:#D8D8D8; border-bottom-style:solid; border-bottom-width:1px;}
+.even {background-color:#fff;}
+
 body {
     margin: 0;
     font-family: Helvetica, Arial;
@@ -85,6 +88,7 @@ table.grid tr:last-of-type td{
     text-align: left;
     font-size:75%;
     width: 70%;
+
 }
 .submit_td{
     width: 98%;
@@ -96,8 +100,9 @@ table.grid tr:last-of-type td{
 .gridright {
     text-align: left;
     font-size: 5px;
+    font-family:sans-serif;
     width: 100%;
-    vertical-align:middle;
+    border-bottom-color:#D8D8D8; border-bottom-style:solid; border-bottom-width:1px;
 }
 .gridquestion {
     color:#1B396D;

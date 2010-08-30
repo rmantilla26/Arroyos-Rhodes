@@ -2,7 +2,7 @@
 <%   @downloadses.each do |file|
     if file  %>
     <tr >
-      <td width="2%" valign="middle"><img width="25" height="25" align="middle" src="/public/images/icos/<%=file.type%>.jpg"/></td>
+      <td width="2%" valign="middle"><img width="25" height="25" align="middle" src="/public/images/icos/<%=file.type%>.png"/></td>
       <td class="gridright" valign="middle">&nbsp;<a href="/app/Searchs/upload_file?&name=<%=file.name%>&type=<%=file.type%>"><%=file.name%></a></td>
     </tr>
   <% end
